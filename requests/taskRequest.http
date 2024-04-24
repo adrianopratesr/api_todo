@@ -1,0 +1,28 @@
+### Variables 
+@apiurl = http://localhost:3000/api
+
+### GET - find all
+GET {{apiurl}}/tasks HTTP/1.1
+
+### GET - task by id
+GET {{apiurl}}/tasks/992a60dc-b174-498a-b8cf-2326b19abf69 HTTP/1.1
+
+### PATCH - updated task by id
+PATCH {{apiurl}}/tasks/992a60dc-b174-498a-b8cf-2326b19abf69 HTTP/1.1
+Content-Type: application/json
+
+{
+    "title": "Luana",
+    "status": true
+}
+
+### POST - create task
+POST {{apiurl}}/tasks HTTP/1.1
+Content-Type: application/json
+
+{
+    "title": "new task"
+}
+
+### DELETED - deleted task by id
+DELETE {{apiurl}}/tasks/998add54-e500-4c3f-ae39-e7f36be39110 HTTP/1.1
